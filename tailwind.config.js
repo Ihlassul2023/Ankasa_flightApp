@@ -16,6 +16,7 @@ module.exports = {
         findTicket: "500px",
         rNavbar: "-100%",
         section3: "600px",
+        wSection: "70%",
       },
       colors: {
         buttonSign: "rgba(35, 149, 255, 1)",
@@ -23,6 +24,9 @@ module.exports = {
         textColor: "rgba(151, 151, 151, 1)",
         textFooter: "rgba(107, 107, 107, 1)",
         bgSelectTicket2: "rgba(245, 246, 250, 1)",
+        bgPassenger: "rgba(35, 149, 255, 0.1)",
+        buttonWaiting: "rgba(255, 127, 35, 1)",
+        buttonSuccess: "rgba(79, 207, 77, 1)",
       },
       padding: {
         pl: "35px",

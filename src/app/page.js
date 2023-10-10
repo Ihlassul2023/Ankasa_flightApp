@@ -18,10 +18,10 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <nav className="flex-none w-screen">
+      <nav className="flex-none ">
         <Navbar />
       </nav>
-      <main className="grow  w-screen pt-32">
+      <main className="grow   pt-32">
         <section>
           <div className="flex flex-col md:flex-row items-center justify-between mb-8">
             <div className=" flex flex-col md:pl-32">

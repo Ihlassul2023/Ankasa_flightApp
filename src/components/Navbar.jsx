@@ -14,14 +14,16 @@ import email from "../assets/img/message.png";
 import profile from "../assets/img/profilPicture.png";
 import notif from "../assets/img/btnNotifications.png";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const [showFindTicket, setShowFindTicket] = useState(true);
+  const [showFindTicket, setShowFindTicket] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const router = useRouter();
   return (
     <>
       <div className="flex h-28 justify-around items-center bg-white fixed z-50 top-0 right-0 left-0">
-        <Image src={logo} alt="logo" />
+        <Image className=" cursor-pointer" onClick={() => router.push("/")} src={logo} alt="logo" />
         <Image className="flex md:hidden" src={hamburger} onClick={() => setShowNavbar(!showNavbar)} alt="menu" />
         <div
           className={
@@ -39,13 +41,15 @@ const Navbar = () => {
             <p className="hover:font-bold hover:border-b-2  hover:border-buttonSign cursor-pointer" onClick={() => setShowFindTicket(!showFindTicket)}>
               Find Ticket
             </p>
-            <p className="hover:font-bold hover:border-b-2  hover:border-buttonSign cursor-pointer">My Booking</p>
+            <Link href="/User/Booking" className="hover:font-bold hover:border-b-2  hover:border-buttonSign cursor-pointer">
+              My Booking
+            </Link>
           </div>
           {localStorage.getItem("token") ? (
             <div className="flex p-4 rounded-lg bg-white md:flex-row items-center gap-4  justify-between">
               <Image src={email} alt="email" />
               <Image src={notif} alt="notif" />
-              <Image src={profile} alt="profile" />
+              <Image className=" cursor-pointer" onClick={() => router.push("/User/Profile")} src={profile} alt="profile" />
             </div>
           ) : (
             <Link href="/Auth/Register" className="p-4 text-textColor text-center bg-white border-2 border-buttonSign md:text-white md:border-0 md:bg-buttonSign rounded-lg w-52">
