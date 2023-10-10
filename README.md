@@ -85,7 +85,7 @@ git clone https://github.com/Ihlassul2023/Ankasa_flightApp
 - Go To Folder Repo
 
 ```
-cd recipe-app-client
+cd Ankasa_flightApp
 ```
 
 - Install Module
