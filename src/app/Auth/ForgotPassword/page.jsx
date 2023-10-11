@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://easy-lime-seal-toga.cyclic.app/auth/forgot_password", { email, fe_url: "http://localhost:3000/Auth/NPass" });
+      const res = await axios.post("https://easy-lime-seal-toga.cyclic.app/auth/forgot_password", { email, fe_url: "https://ankasa-flight-app-ycrk.vercel.app" });
       toast.success(res.data.message);
     } catch (error) {
       console.log(error);
