@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = typeof window !== "undefined" && localStorage.getItem("token");
     if (!token) {
       toast.error("harap login terlebih dahulu!");
       router.push("/Auth/Login");

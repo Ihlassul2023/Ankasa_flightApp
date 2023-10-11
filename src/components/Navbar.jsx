@@ -45,7 +45,7 @@ const Navbar = () => {
               My Booking
             </Link>
           </div>
-          {localStorage.getItem("token") ? (
+          {typeof window !== "undefined" && localStorage.getItem("token") ? (
             <div className="flex p-4 rounded-lg bg-white md:flex-row items-center gap-4  justify-between">
               <Image src={email} alt="email" />
               <Image src={notif} alt="notif" />
